@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <iostream>
 struct Card 
 { 
 	std::string suit;
@@ -8,15 +9,16 @@ struct Card
 };
 class Deck
 {
-private:
+public:
 	Deck(int noDecks);
 	~Deck();
 
-public:
-	int numberOfDecks = 0;
-	int cardsInDeck = 52;
+	void PopulateDeck();
+private:
+	int numberOfDecks_ = 0;
+	int cardsInDeck_ = 52;
 
-	std::vector<Card> deck = {};
+	std::vector<Card> deck_ = {};
 
 };
 
