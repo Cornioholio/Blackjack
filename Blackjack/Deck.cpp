@@ -2,21 +2,37 @@
 Deck::Deck(int noDecks) : numberOfDecks_(noDecks)
 {
 	deck_.reserve(cardsInDeck_ * numberOfDecks_);
+	PopulateDeck();
 }
 Deck::~Deck() 
 {
 	
 }
 
+// O(n) Population of deck with suits and values. Could be O(1) but there can be multiple decks.
 void Deck::PopulateDeck() 
 {
-	std::vector<std::string> suits = { "Spades", "Hearts", "Clubs", "Diamonds" };
-	for(const std::string& s : suits) 
+	// Declare all suits and value - face pairs.
+	static const std::array<std::string, 4> suits = { "Spades", "Hearts", "Clubs", "Diamonds" };
+	static const std::array<std::pair<std::string, int>, 13> faceValues = { std::make_pair("Two", 2), std::make_pair("Three", 3), std::make_pair("Four", 4), std::make_pair("Five", 5), std::make_pair("Six", 6), std::make_pair("Seven", 7), std::make_pair("Eight", 8), std::make_pair("Nine", 9), std::make_pair("Ten", 10), std::make_pair("King", 10), std::make_pair("Queen", 10), std::make_pair("Jack", 10), std::make_pair("Ace", 11) };
+	
+	// Iterate over 4 suits and 13 face values per deck and push back to deck vector.
+	for(int d = 0; d < numberOfDecks_; d++) 
 	{
-		for (int i = 2; i <= 10; i++)
+		for (const std::string& s : suits)
 		{
-			deck_.push_back({ s, i });
-			std::cout << i << s << std::endl;
+			for (const auto& v : faceValues)
+			{
+				deck_.push_back({ s, v.first, v.second });
+			}
 		}
+	}
+}
+// O(n) again. Iterates deck vector and displays each cards suit and value
+void Deck::DisplayDeck()
+{
+	for(const auto& d : deck_) 
+	{
+		std::cout << d.faceValue << " of " << d.suit << std::endl;
 	}
 }

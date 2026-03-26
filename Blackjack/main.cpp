@@ -4,7 +4,7 @@ int main()
 {
 	Deck deck(1);
 
-	deck.PopulateDeck();
+	deck.DisplayDeck();
 
 	return 0;
 }

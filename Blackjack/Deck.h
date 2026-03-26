@@ -2,10 +2,12 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <array>
 struct Card 
 { 
 	std::string suit;
-	int value;
+	std::string faceValue;
+	int numericValue;
 };
 class Deck
 {
@@ -14,6 +16,8 @@ public:
 	~Deck();
 
 	void PopulateDeck();
+
+	void DisplayDeck();
 private:
 	int numberOfDecks_ = 0;
 	int cardsInDeck_ = 52;
