@@ -3,6 +3,9 @@
 #include <string>
 #include <iostream>
 #include <array>
+#include <cstdlib>
+#include <algorithm>
+#include <random>
 struct Card 
 { 
 	std::string suit;
@@ -16,6 +19,7 @@ public:
 	~Deck();
 
 	void PopulateDeck();
+	void ShuffleDeck();
 
 	void DisplayDeck();
 private:

@@ -28,6 +28,13 @@ void Deck::PopulateDeck()
 		}
 	}
 }
+void Deck::ShuffleDeck()
+{
+	if (deck_.empty()) return;
+	std::random_device rd;
+	std::mt19937 rng(rd());
+	std::shuffle(deck_.begin(), deck_.end(), rng);
+}
 // O(n) again. Iterates deck vector and displays each cards suit and value
 void Deck::DisplayDeck()
 {
