@@ -5,11 +5,12 @@ class Player : public GeneralPlayer
 {
 public: 
 	Player(int pID) : GeneralPlayer(pID) {}
-
-	void PlaceBet(int amount) { bet_ = amount; }
-
-	int GetBet() const { return bet_; }
+	
+	void PlaceBet(float amount) { bet_ = amount; }
+	float GetBet() const { return bet_; }
 private:
-	int bet_;
+	float bank_ = 0;
+	float bet_ = 0;
+
 };
 

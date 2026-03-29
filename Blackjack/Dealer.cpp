@@ -1,5 +1,14 @@
 #include "Dealer.h"
-void Dealer::DealCard(Player& hand, Deck& deck) 
+float Dealer::ReturnRewards(Player& player) 
 {
-	hand.AddToHand(deck.DrawCard());
+	// In the future, when GameManager is in, take in the odds for the current game and return appropriate reward.
+	return player.GetBet() * 2;
+}
+void Dealer::DealPlayerCard(Player& player, Deck& deck) 
+{
+	player.AddToHand(deck.DrawCard());
+}
+void Dealer::DealDealerCard(Deck& deck) 
+{
+	AddToHand(deck.DrawCard());
 }

@@ -29,6 +29,5 @@ private:
 	int cardsInDeck_ = 52;
 
 	std::vector<Card> deck_ = {};
-
 };
 

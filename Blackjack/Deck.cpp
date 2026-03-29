@@ -31,6 +31,7 @@ void Deck::PopulateDeck()
 void Deck::ShuffleDeck()
 {
 	if (deck_.empty()) return;
+
 	std::random_device rd;
 	std::mt19937 rng(rd());
 	std::shuffle(deck_.begin(), deck_.end(), rng);
@@ -44,10 +45,10 @@ void Deck::DisplayDeck()
 		std::cout << d.faceValue << " of " << d.suit << std::endl;
 	}
 }
-
 Card Deck::DrawCard()
 {
 	if (deck_.empty()) return Card();
+
 	Card drawnCard = deck_.back();
 	deck_.pop_back();
 	return drawnCard;

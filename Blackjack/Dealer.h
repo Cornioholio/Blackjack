@@ -6,7 +6,10 @@ class Dealer : public GeneralPlayer
 public:
 	Dealer(int pID) : GeneralPlayer(pID) {}
 
-	void DealCard(Player& hand, Deck& deck);
+	float ReturnRewards(Player& player);
+	
+	void DealPlayerCard(Player& player, Deck& deck);
+	void DealDealerCard(Deck& deck);
 private:
 	
 };
