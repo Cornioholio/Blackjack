@@ -127,6 +127,7 @@
   <ItemGroup>
     <ClCompile Include="Dealer.cpp" />
     <ClCompile Include="Deck.cpp" />
+    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GeneralPlayer.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -134,6 +135,7 @@
   <ItemGroup>
     <ClInclude Include="Dealer.h" />
     <ClInclude Include="Deck.h" />
+    <ClInclude Include="GameManager.h" />
     <ClInclude Include="GeneralPlayer.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>

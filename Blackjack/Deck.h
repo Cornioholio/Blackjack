@@ -11,11 +11,20 @@ struct Card
 	std::string suit;
 	std::string faceValue;
 	int numericValue;
+
+	bool isFaceUp = true;
+
+	void DisplayCard() const 
+	{
+		if(isFaceUp == false) return;
+		std::cout << faceValue << " of " << suit << std::endl;
+	}
 };
 class Deck
 {
 public:
 	Deck(int noDecks);
+	Deck() = default;
 	~Deck();
 
 	void PopulateDeck();

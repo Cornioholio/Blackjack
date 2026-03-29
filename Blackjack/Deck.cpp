@@ -40,9 +40,9 @@ void Deck::ShuffleDeck()
 void Deck::DisplayDeck()
 {
 	std::cout << "!! Deck contains: " << std::endl;
-	for(const auto& d : deck_) 
+	for(const auto& card : deck_) 
 	{
-		std::cout << d.faceValue << " of " << d.suit << std::endl;
+		card.DisplayCard();
 	}
 }
 Card Deck::DrawCard()
