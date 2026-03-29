@@ -125,11 +125,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dealer.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="GeneralPlayer.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Dealer.h" />
     <ClInclude Include="Deck.h" />
+    <ClInclude Include="GeneralPlayer.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

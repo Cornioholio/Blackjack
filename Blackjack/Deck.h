@@ -22,6 +22,8 @@ public:
 	void ShuffleDeck();
 
 	void DisplayDeck();
+
+	Card DrawCard();
 private:
 	int numberOfDecks_ = 0;
 	int cardsInDeck_ = 52;

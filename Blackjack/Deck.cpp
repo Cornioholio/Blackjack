@@ -38,8 +38,17 @@ void Deck::ShuffleDeck()
 // O(n) again. Iterates deck vector and displays each cards suit and value
 void Deck::DisplayDeck()
 {
+	std::cout << "!! Deck contains: " << std::endl;
 	for(const auto& d : deck_) 
 	{
 		std::cout << d.faceValue << " of " << d.suit << std::endl;
 	}
+}
+
+Card Deck::DrawCard()
+{
+	if (deck_.empty()) return Card();
+	Card drawnCard = deck_.back();
+	deck_.pop_back();
+	return drawnCard;
 }
