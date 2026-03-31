@@ -2,10 +2,10 @@
 
 int main() 
 {
-	GameManager gameManager;
-	while(true) 
+	std::unique_ptr<GameManager> gameManager = std::make_unique<GameManager>();
+	while (true)
 	{
-		gameManager.Update();
+		gameManager->Update();
 	}
 	return 0;
 }

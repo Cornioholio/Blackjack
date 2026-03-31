@@ -2,6 +2,8 @@
 #include "Player.h"
 #include "Dealer.h"
 #include "Deck.h"
+#include "InputUtils.h"
+
 enum class GameState
 {
 	GameSetup = 0,
@@ -17,13 +19,12 @@ class GameManager
 public:
 	GameManager();
 
-	void InitUsers();
-
+	void GameSetup();
+	void WaitingForBets();
 	void Update();
 
 private:
 	Deck deck_;
-	Dealer dealer_;
 	std::vector<Player> players_;
 
 	GameState currentState_;

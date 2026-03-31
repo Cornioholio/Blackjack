@@ -5,6 +5,7 @@ class Player : public GeneralPlayer
 {
 public: 
 	Player(int pID) : GeneralPlayer(pID) {}
+	Player() = default;
 	
 	void PlaceBet(float amount) { bet_ = amount; }
 	float GetBet() const { return bet_; }

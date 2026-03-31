@@ -5,6 +5,7 @@ class Dealer : public GeneralPlayer
 {
 public:
 	Dealer(int pID) : GeneralPlayer(pID) {}
+	Dealer() = default;
 
 	float ReturnRewards(Player& player);
 	

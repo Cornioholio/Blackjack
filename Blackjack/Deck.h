@@ -6,6 +6,8 @@
 #include <cstdlib>
 #include <algorithm>
 #include <random>
+#include <memory>
+
 struct Card 
 { 
 	std::string suit;
@@ -25,6 +27,7 @@ class Deck
 public:
 	Deck(int noDecks);
 	Deck() = default;
+
 	~Deck();
 
 	void PopulateDeck();
