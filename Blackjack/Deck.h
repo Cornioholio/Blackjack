@@ -18,7 +18,11 @@ struct Card
 
 	void DisplayCard() const 
 	{
-		if(isFaceUp == false) return;
+		if(isFaceUp == false) 
+		{
+			std::cout << "Face down card" << std::endl;
+			return;
+		}
 		std::cout << faceValue << " of " << suit << std::endl;
 	}
 };

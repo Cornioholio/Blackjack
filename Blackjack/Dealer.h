@@ -10,7 +10,7 @@ public:
 	float ReturnRewards(Player& player);
 	
 	void DealPlayerCard(Player& player, Deck& deck);
-	void DealDealerCard(Deck& deck);
+	void DealDealerCard(Deck& deck, bool faceUp);
 private:
 	
 };

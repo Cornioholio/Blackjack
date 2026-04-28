@@ -20,12 +20,14 @@ public:
 	GameManager();
 
 	void GameSetup();
-	void WaitingForBets();
+
 	void Update();
 
 private:
-	Deck deck_;
 	std::vector<Player> players_;
+	Dealer dealer_;
+	Deck deck_;
+
 
 	GameState currentState_;
 };

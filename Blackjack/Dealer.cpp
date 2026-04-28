@@ -8,7 +8,9 @@ void Dealer::DealPlayerCard(Player& player, Deck& deck)
 {
 	player.AddToHand(deck.DrawCard());
 }
-void Dealer::DealDealerCard(Deck& deck) 
+void Dealer::DealDealerCard(Deck& deck, bool faceUp) 
 {
-	AddToHand(deck.DrawCard());
+	Card card = deck.DrawCard();
+	card.isFaceUp = faceUp;
+	AddToHand(card);
 }

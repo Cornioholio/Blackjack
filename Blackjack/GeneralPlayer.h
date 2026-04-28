@@ -8,8 +8,9 @@ public:
 
 	void DisplayHand();
 
+	int GetPlayerID() const { return playerID_; }
 private:
-	void AddToHand(const Card& card) { hand_.push_back(card); }
+	void AddToHand(const Card& card);
 	void ClearHand() { hand_.clear(); }
 
 	friend class Dealer;

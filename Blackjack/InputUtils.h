@@ -5,7 +5,7 @@ class InputUtils
 {
 public:
 	template <typename T>
-	static T GetValidatedIntInput(const std::string& prompt, T min, T max)
+	static T GetValidatedInput(const std::string& prompt, T min, T max)
 	{
 		T input;
 		int error = 0;
